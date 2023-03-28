@@ -20,8 +20,6 @@ The script will connect to each switch in `switch_list`, retrieve the list of VL
 ## Output
 The script will output messages indicating which switch it is connecting to, which VLANs are being configured, and when it is disconnecting from each switch.
 
-At the end of the script, it will also print out the start and end times of the script, as well as the total time taken to execute.
-
 ## Note
 This script is provided as an example only, and should be modified to suit your specific requirements. Use at your own risk.
 

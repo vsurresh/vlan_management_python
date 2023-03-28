@@ -25,6 +25,7 @@ for ip in switch_list:
     device_inventroy.append(device)
 
 for switch in device_inventroy:
+    print(f"Connecting to {switch['host']}")
     connection = ConnectHandler(**switch)
     output = connection.send_command('show vlan', use_textfsm=True)
     connection.enable() # Enable method
@@ -40,4 +41,5 @@ for switch in device_inventroy:
             config_output = connection.send_config_set(commands)
             print(config_output)
 
+    print(f"Disconnecting from {switch['host']}")
     connection.disconnect()
