@@ -1,0 +1,28 @@
+suresh@mac:~/Documents/vlan_standard|⇒  python vlan_script.py
+
+vlan 31
+switch-01(config-vlan)#name web_servers
+switch-01(config-vlan)#end
+switch-01#
+
+vlan 10
+switch-02(config-vlan)#name MGMT
+switch-02(config-vlan)#end
+switch-02#
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+switch-02(config)#vlan 20
+switch-02(config-vlan)#name DATA
+switch-02(config-vlan)#end
+switch-02#
+
+vlan 10
+switch-03(config-vlan)#name MGMT
+switch-03(config-vlan)#end
+switch-03#
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+switch-03(config)#vlan 20
+switch-03(config-vlan)#name DATA
+switch-03(config-vlan)#end
+switch-03#
